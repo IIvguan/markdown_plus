@@ -1,0 +1,15 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog</title>
+    {{ form.media }}
+    <link rel="stylesheet" href="{% static 'css/code.css' %}">
+</head>
+<body>
+     <a href="/blog/?action=44&id={{ blog.id }}">edit</a>
+     <h1>{{ blog.name }}</h1>
+    {{ blog.body|safe }}
+</body>
+</html>
